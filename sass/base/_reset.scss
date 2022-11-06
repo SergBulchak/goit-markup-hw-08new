@@ -1,0 +1,37 @@
+h1,
+h2,
+h3,
+p,
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  list-style-type: none;
+}
+textarea {
+  resize: none;
+}
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: transparent;
+}
+
+input {
+  outline: transparent;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: var(--title-text-color);
+  text-decoration: none;
+  line-height: 1.71;
+  outline: transparent;
+}
