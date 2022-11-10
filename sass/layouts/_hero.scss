@@ -1,40 +1,78 @@
 .hero {
-    background-color: var(--background-color);
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    max-width: 1600px;
+  background-color: var(--background-color);
+  background-image: var(--gradient), url(../images/hero-mobile-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin: 0 auto;
+
+  @include retina {
+    background-image: var(--gradient), url(../images/hero-mobile-2x.jpg);
+  }
+
+  @include galaxy {
+    background-image: var(--gradient), url(../images/hero-mobile-3x.jpg);
+  }
+
+  @include tablet {
+    background-image: var(--gradient), url(../images/hero-tablet-1x.jpg);
+
+    @include retina {
+      background-image: var(--gradient), url(../images/hero-tablet-2x.jpg);
+    }
+
+    @include galaxy {
+      background-image: var(--gradient), url(../images/hero-tablet-3x.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: var(--gradient), url(../images/hero-1x.jpg);
     padding-top: 200px;
     padding-bottom: 200px;
-    margin: 0 auto;
+
+    @include retina {
+      background-image: var(--gradient), url(../images/hero-2x.jpg);
+    }
+
+    @include galaxy {
+      background-image: var(--gradient), url(../images/hero-3x.jpg);
+    }
   }
-  .hero__title {
+}
+
+.hero__title {
+  max-width: 360px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-color);
+
+  @include desktop {
     max-width: 696px;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--white-color);
   }
-  .hero__btn {
-    width: 216px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+}
+
+.hero__btn {
+  width: 216px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
