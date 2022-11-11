@@ -113,7 +113,7 @@ body {
 .menu__close-btn {
   position: absolute;
   top: 15px;
-  right: 25.33px;
+  right: 15px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -700,7 +700,6 @@ body {
 @media screen and (max-width: 767px) {
   .header__open-btn {
     display: block;
-    position: fixed;
     top: 22px;
     right: 22px;
   }
