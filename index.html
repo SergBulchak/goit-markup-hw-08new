@@ -201,7 +201,24 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img src="./images/phteam1.jpg" alt="member1" width="270" height="260" />
+                        <picture>
+                            <source srcset="
+                            ./images/team1-mobile-1x.jpg 1x,
+                            ./images/team1-mobile-2x.jpg 2x,
+                            ./images/team1-mobile-3x.jpg 3x
+                          " media="(max-width: 767px)" />
+                            <source srcset="
+                            ./images/team1-tablet-1x.jpg 1x,
+                            ./images/team1-tablet-2x.jpg 2x,
+                            ./images/team1-tablet-3x.jpg 3x
+                          " media="(max-width: 1119px)" />
+                            <source srcset="
+                            ./images/team1-1x.jpg 1x,
+                            ./images/team1-2x.jpg 2x,
+                            ./images/team1-3x.jpg 3x 
+                          " media="(min-width: 1200px)" />
+                            <img src="./images/team1-mobile-1x.jpg" alt="member1" width="450" />
+                        </picture>
                         <div class="team__info">
                             <h3 class="team__name">Ігор Дем'яненко</h3>
                             <p class="team__position">Product Designer</p>
@@ -238,7 +255,24 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/phteam2.jpg" alt="member2" width="270" height="260" />
+                        <picture>
+                            <source srcset="
+                            ./images/team2-mobile-1x.jpg 1x,
+                            ./images/team2-mobile-2x.jpg 2x,
+                            ./images/team2-mobile-3x.jpg 3x
+                            " media="(max-width: 767px)" />
+                            <source srcset="
+                            ./images/team2-tablet-1x.jpg 1x,
+                            ./images/team2-tablet-2x.jpg 2x,
+                            ./images/team2-tablet-3x.jpg 3x
+                            " media="(max-width: 1119px)" />
+                            <source srcset="
+                            ./images/team2-1x.jpg 1x,
+                            ./images/team2-2x.jpg 2x,
+                            ./images/team2-3x.jpg 3x 
+                            " media="(min-width: 1200px)" />
+                            <img src="./images/team2-mobile-1x.jpg" alt="member2" width="450" />
+                        </picture>
                         <div class="team__info">
                             <h3 class="team__name">Ольга Рєпіна</h3>
                             <p class="team__position">Frontend Developer</p>
@@ -275,7 +309,24 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/phteam3.jpg" alt="member3" width="270" height="260" />
+                        <picture>
+                            <source srcset="
+                            ./images/team3-mobile-1x.jpg 1x,
+                            ./images/team3-mobile-2x.jpg 2x,
+                            ./images/team3-mobile-3x.jpg 3x
+                            " media="(max-width: 767px)" />
+                            <source srcset="
+                            ./images/team3-tablet-1x.jpg 1x,
+                            ./images/team3-tablet-2x.jpg 2x,
+                            ./images/team3-tablet-3x.jpg 3x
+                            " media="(max-width: 1119px)" />
+                            <source srcset="
+                            ./images/team3-1x.jpg 1x,
+                            ./images/team3-2x.jpg 2x,
+                            ./images/team3-3x.jpg 3x 
+                            " media="(min-width: 1200px)" />
+                            <img src="./images/team3-mobile-1x.jpg" alt="member1" width="450" />
+                        </picture>
                         <div class="team__info">
                             <h3 class="team__name">Микола Тарасов</h3>
                             <p class="team__position">Marketing</p>
@@ -312,7 +363,24 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/phteam4.jpg" alt="member4" width="270" height="260" />
+                        <picture>
+                            <source srcset="
+                            ./images/team4-mobile-1x.jpg 1x,
+                            ./images/team4-mobile-2x.jpg 2x,
+                            ./images/team4-mobile-3x.jpg 3x
+                            " media="(max-width: 767px)" />
+                            <source srcset="
+                            ./images/team4-tablet-1x.jpg 1x,
+                            ./images/team4-tablet-2x.jpg 2x,
+                            ./images/team4-tablet-3x.jpg 3x
+                            " media="(max-width: 1119px)" />
+                            <source srcset="
+                            ./images/team4-1x.jpg 1x,
+                            ./images/team4-2x.jpg 2x,
+                            ./images/team4-3x.jpg 3x 
+                            " media="(min-width: 1200px)" />
+                            <img src="./images/team4-mobile-1x.jpg" alt="member1" width="450" />
+                        </picture>
                         <div class="team__info">
                             <h3 class="team__name">Михайло Єрмаков</h3>
                             <p class="team__position">UI Designer</p>
@@ -338,7 +406,7 @@
                                         </svg>
                                     </a>
                                 </li>
-
+        
                                 <li>
                                     <a href="" class="socials__link">
                                         <svg class="socials__icons" width="20" height="20">
@@ -404,7 +472,7 @@
     </main>
     <footer class="footer">
         <div class="container footer__container">
-            <div>
+            <div class="footer__nav">
                 <a href="./index.html" class="logo footer__logo"><span class="logo--accent">Web</span>Studio</a>
                 <address class="address">
                     <ul class="address__list">
@@ -454,11 +522,13 @@
                     </li>
                 </ul>
             </div>
-            <div>
+            <div class="form__thumb">
                 <span class="footer__title"> Підпишіться на розсилку </span>
                 <form class="form">
-                    <label>
-                        <input type="email" name="user-email" placeholder="E-mail" class="form__input" />
+                    <label class="form__label">
+                        <input type="email" 
+                        name="user-email" placeholder="E-mail" 
+                        class="form__input" />
                     </label>
                     <button type="submit" class="btn form__btn">
                         Підписатися
@@ -486,7 +556,6 @@
                         <use href="./images/icons.svg#icon-person"></use>
                     </svg>
                 </div>
-
                 <div class="modal__thumb">
                     <label for="user-tel" class="modal__label">Телефон</label>
                     <input type="tel" name="user-tel" id="user-tel" class="modal__input" />
@@ -494,7 +563,7 @@
                         <use href="./images/icons.svg#icon-phone"></use>
                     </svg>
                 </div>
-
+        
                 <div class="modal__thumb">
                     <label for="user-email" class="modal__label">Пошта</label>
                     <input type="email" name="user-email" id="user-email" class="modal__input" />
@@ -502,7 +571,6 @@
                         <use href="./images/icons.svg#icon-email"></use>
                     </svg>
                 </div>
-
                 <div class="modal__comment">
                     <label class="modal__label"> Коментар</label>
                     <textarea name="comment" rows="10" class="modal__input modal__input--big"
@@ -511,21 +579,20 @@
                 <div class="modal__checkbox">
                     <label class="checkbox__label">
                         <input type="checkbox" name="checkbox" class="visually-hidden checkbox" />
-                        <span class="checkbox__icon">
-                            <svg width="16" height="15">
-                                <use href="./images/icons.svg#icon-check"></use>
-                            </svg>
-                        </span>
-                        <span class="checkbox__text">
-                            Погоджуюся з розсилкою та приймаю
-                            <a href="" target="_blank" rel="noreferrer noopener" class="checkbox__link">
-                                Умови договору</a>
+                        <span class="modal-checkbox__thumb">
+                            <span class="checkbox__icon">
+                                <svg width="16" height="15">
+                                    <use href="./images/icons.svg#icon-check"></use>
+                                </svg>
+                            </span>
+                            <span class="checkbox__text">
+                                Погоджуюся з розсилкою та приймаю
+                                <a href="" target="_blank" rel="noreferrer noopener" class="checkbox__link">
+                                    Умови договору</a>
+                            </span>
                         </span>
                     </label>
                 </div>
-                <button type="submit" class="btn modal__btn">Відправити</button>
-            </form>
-        </div>
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
