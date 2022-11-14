@@ -178,7 +178,7 @@
   transform: translate(-50%, -50%);
 }
 
-.checkbox:checked+.checkbox__icon {
+.checkbox:checked+.modal-checkbox__thumb svg {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   fill: var(--white-color);
